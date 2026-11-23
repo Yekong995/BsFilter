@@ -12,7 +12,7 @@ group "default" {
 target "bsfilter" {
   dockerfile = "Dockerfile"
   platforms  = ["linux/amd64", "linux/arm64"]
-  tags       = ["bsfilter:latest", "bsfilter:0.1.0"]
+  tags       = ["yekong1124/bsfilter:latest", "yekong1124/bsfilter:0.1.0"]
   args = {
     BUILD_DATE = "${BUILD_DATE}"
     GIT_COMMIT = "${GIT_COMMIT}"
