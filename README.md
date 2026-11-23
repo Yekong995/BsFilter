@@ -33,3 +33,14 @@ $env:BUILD_DATE = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 $env:GIT_COMMIT = git rev-parse --short HEAD
 docker-compose up --build -d # 直接部署使用可只看这行，上面是给有需要进行镜像构建的用户使用
 ```
+
+docker-compose.yml:
+```
+services:
+  bsfilter:
+    image: yekong1124/bsfilter:latest
+    container_name: bsFilter
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8004:8000"
+```
